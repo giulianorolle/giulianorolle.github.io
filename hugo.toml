@@ -12,10 +12,14 @@ disableKinds = ["taxonomy", "term", "RSS"]
   logo = "photo.jpg"
   # Shown in the menu only if the file exists in static/
   cv = "pdf/Rolle_CV.pdf"
+  # Picture shown at the very bottom of the page
+  endimage = "img/mountains.jpg"
+  endimage_alt = "Snow-covered mountains at sunset"
 
   # Page sections, in order. Each one is either a Markdown file in
   # content/sections/ ("page") or a list of papers in data/ ("data").
-  # small = true renders the section in a smaller font.
+  # small = true renders the section in a smaller font;
+  # image / image_alt show a picture above the section title.
   [[params.sections]]
     id = "bio"
     title = "Bio"

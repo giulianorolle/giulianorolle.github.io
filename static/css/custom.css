@@ -12,3 +12,31 @@ header img {
 
 .small-section h3 {
   font-size: 1em; }
+
+.section-image {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin: 0 0 20px; }
+
+/* Print / PDF: abstracts open, no on-page menu, site address under the name */
+.print-only {
+  display: none; }
+
+@media print {
+  [id^="pubabs_"] {
+    display: inline !important; }
+
+  [id^="pubabslink_"],
+  header p.contactinfo,
+  header p.lastcontactinfo {
+    display: none !important; }
+
+  .print-only {
+    display: block; }
+
+  h2, h3 {
+    break-after: avoid; }
+
+  img {
+    break-inside: avoid; } }

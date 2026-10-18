@@ -16,6 +16,7 @@
                 <h1>{{ site.Title }}</h1>
 
                 <p>{{ site.Params.shortbio }}</p>
+                <p class="print-only"><a href="{{ site.BaseURL }}">{{ strings.TrimSuffix "/" (strings.TrimPrefix "https://" site.BaseURL) }}</a></p>
 
                 <hr/>
 

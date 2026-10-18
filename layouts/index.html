@@ -9,6 +9,7 @@
   {{ with site.GetPage $s.page }}
     {{ if not ($scratch.Get "first") }}<hr>{{ end }}{{ $scratch.Set "first" false }}
     <div{{ if $s.small }} class="small-section"{{ end }}>
+    {{ with $s.image }}<img class="section-image" src="{{ . | relURL }}" alt="{{ $s.image_alt }}">{{ end }}
     <h2 id="{{ $s.id }}">{{ $s.title }}</h2>
     {{ .Content }}
     </div>
@@ -17,6 +18,7 @@
   {{ with index hugo.Data $s.data }}
     {{ if not ($scratch.Get "first") }}<hr>{{ end }}{{ $scratch.Set "first" false }}
     <div{{ if $s.small }} class="small-section"{{ end }}>
+    {{ with $s.image }}<img class="section-image" src="{{ . | relURL }}" alt="{{ $s.image_alt }}">{{ end }}
     <h2 id="{{ $s.id }}">{{ $s.title }}</h2>
     {{ range . }}
       {{ range .works }}
@@ -27,5 +29,10 @@
     </div>
   {{ end }}
 {{ end }}
+{{ end }}
+
+{{ with site.Params.endimage }}
+<hr>
+<img class="section-image" src="{{ . | relURL }}" alt="{{ site.Params.endimage_alt }}">
 {{ end }}
 {{- end }}
