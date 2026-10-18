@@ -1,0 +1,11 @@
+# One entry per paper. Optional fields: coauthors, note, status, book, abstract, pdflink, links (list of url/text/note).
+works:
+  - title: "A Toast to Health? Cognitive Effects of Local Pesticide Regulations"
+    # pdflink: "pdf/Rolle_pesticides.pdf"
+    abstract: "Exploiting staggered regulatory changes in Veneto (Italy), I estimate the medium-term cognitive returns to reduced prenatal pesticide exposure: affected children score 0.2 standard deviations higher in math test scores relative to controls."
+
+  - title: "Under a Cloud of Smoke: Wildfires and Mental-Health Hospitalizations in Mexico"
+    status: "Coming soon"
+    # pdflink: "pdf/Rolle_wildfires.pdf"
+    # Hidden for now; uncomment to show it again
+    # abstract: "Combining weekly mental-health inpatient admissions for 2,410 Mexican municipalities (2008–2023) with satellite fire perimeters and modelled smoke dispersion, a local-projections difference-in-differences design shows that admissions rise by 15% relative to the pre-ignition mean two weeks after a large local wildfire."

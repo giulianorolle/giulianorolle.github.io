@@ -1,0 +1,20 @@
+      <footer>
+        <p><small>Last updated {{ now.Format "January 2006" }}</small></p>
+      </footer>
+    </div>
+    <script src="{{ "js/scale.fix.js" | relURL }}"></script>
+    <script>
+        function toggle(pid) {
+            var absobj = document.getElementById("pubabs_" + pid);
+            var linkobj = document.getElementById("pubabslink_" + pid);
+            if (absobj.style.display === "none") {
+                absobj.style.display = "inline";
+                linkobj.style.display = "none";
+            } else {
+                absobj.style.display = "none";
+                linkobj.style.display = "inline";
+            }
+        }
+    </script>
+  </body>
+</html>

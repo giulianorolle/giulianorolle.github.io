@@ -1,0 +1,47 @@
+baseURL = "https://giulianorolle996.github.io/"
+relativeURLs = true
+locale = "en"
+defaultContentLanguage = "en"
+title = "Giuliano Marco Federico Rolle"
+theme = "academimal"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  shortbio = "PhD Student in Applied Economics, Gran Sasso Science Institute (GSSI)"
+  description = "Giuliano Marco Federico Rolle, PhD student in Applied Economics at GSSI. Environmental economics, health economics, applied microeconometrics."
+  logo = "photo.jpg"
+  # Shown in the menu only if the file exists in static/
+  cv = "pdf/Rolle_CV.pdf"
+
+  # Page sections, in order. Each one is either a Markdown file in
+  # content/sections/ ("page") or a list of papers in data/ ("data").
+  # small = true renders the section in a smaller font.
+  [[params.sections]]
+    id = "bio"
+    title = "Bio"
+    page = "/sections/aboutme.md"
+  [[params.sections]]
+    id = "news"
+    title = "News"
+    page = "/sections/news.md"
+  [[params.sections]]
+    id = "workingpapers"
+    title = "Working Papers"
+    data = "working_papers"
+  [[params.sections]]
+    id = "presentations"
+    title = "Presentations"
+    page = "/sections/presentations.md"
+  [[params.sections]]
+    id = "education"
+    title = "Education"
+    page = "/sections/education.md"
+  [[params.sections]]
+    id = "researchassistance"
+    title = "Research Assistance"
+    data = "research_assistance"
+    small = true
+  [[params.sections]]
+    id = "contact"
+    title = "Contact"
+    page = "/sections/contact.md"

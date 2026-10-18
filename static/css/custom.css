@@ -1,0 +1,14 @@
+/* Site-specific tweaks on top of the academimal theme */
+
+header img {
+  max-width: 220px;
+  border-radius: 4px; }
+
+.small-section {
+  font-size: 0.85em; }
+
+.small-section h2 {
+  font-size: 1.25em; }
+
+.small-section h3 {
+  font-size: 1em; }

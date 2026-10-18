@@ -1,0 +1,9 @@
+{{ $hasCV := and site.Params.cv (fileExists (printf "static/%s" site.Params.cv)) }}
+{{ $n := len site.Params.sections }}
+{{ range $i, $s := site.Params.sections }}
+{{ $last := and (eq (add $i 1) $n) (not $hasCV) }}
+<p class="{{ if $last }}lastcontactinfo{{ else }}contactinfo{{ end }}"><a href="#{{ $s.id }}">{{ $s.title }}</a></p>
+{{ end }}
+{{ if $hasCV }}
+<p class="lastcontactinfo"><a href="{{ site.Params.cv | relURL }}" target="_blank" rel="noopener">CV (PDF)</a></p>
+{{ end }}
