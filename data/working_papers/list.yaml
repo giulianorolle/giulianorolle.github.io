@@ -1,8 +1,17 @@
 # One entry per paper. Optional fields: coauthors, note, status, book, abstract, pdflink, links (list of url/text/note).
 works:
   - title: "A Toast to Health? Cognitive Effects of Local Pesticide Regulations"
+    coauthors: "Alessandro Palma and Daniela Vuri"
     # pdflink: "pdf/Rolle_pesticides.pdf"
-    abstract: "Exploiting staggered regulatory changes in Veneto (Italy), I estimate the medium-term cognitive returns to reduced prenatal pesticide exposure: affected children score 0.2 standard deviations higher in math test scores relative to controls."
+    abstract: >-
+      We study how local pesticide regulation affects child human capital, and its broader implications, in the Veneto region (Italy).
+      Exploiting staggered municipal adoption under Veneto's 2012 pesticide guideline, we link ordinance timing to population-level second-grade test scores.
+      Among municipalities adopting in 2012–2014, exposure to the regulatory regime beginning in utero raises mathematics scores by 0.14 standard deviations, with no detectable effect on Italian-language performance.
+      Estimates for 2015–2016 adopters are small and imprecise.
+      River-monitoring data show declines in pesticide concentrations downstream of early adopters, consistent with changes in agricultural practices.
+      We also find positive mathematics effects in untreated municipalities exposed to nearby adopters, indicating that conventional estimates are attenuated by contaminated controls.
+      Longitudinal student records further show increased school-enrollment flows toward adopting municipalities.
+      The findings suggest that local pesticide regulation can improve child cognitive outcomes while generating benefits and behavioral responses beyond adopting jurisdictions.
 
   - title: "Under a Cloud of Smoke: Wildfires and Mental-Health Hospitalizations in Mexico"
     status: "Coming soon"
