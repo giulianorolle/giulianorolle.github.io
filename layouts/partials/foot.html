@@ -15,6 +15,31 @@
             }
         }
         (function () {
+            var links = [];
+            document.querySelectorAll('header p a[href^="#"]').forEach(function (a) {
+                var heading = document.getElementById(a.getAttribute("href").slice(1));
+                if (heading) links.push({ link: a, heading: heading });
+            });
+            if (!links.length) return;
+            function update() {
+                var current = links[0];
+                var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+                if (atBottom) {
+                    current = links[links.length - 1];
+                } else {
+                    links.forEach(function (item) {
+                        if (item.heading.getBoundingClientRect().top <= 140) current = item;
+                    });
+                }
+                links.forEach(function (item) {
+                    item.link.classList.toggle("active", item === current);
+                });
+            }
+            window.addEventListener("scroll", update, { passive: true });
+            window.addEventListener("resize", update);
+            update();
+        })();
+        (function () {
             var root = document.documentElement;
             var button = document.getElementById("theme-toggle");
             function label() {

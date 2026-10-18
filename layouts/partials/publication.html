@@ -1,9 +1,9 @@
-<h3 style="margin:20px 0 5px;">{{ with .context.pdflink }}<a href="{{ . | relURL }}" target="_blank" rel="noopener">{{ end }}{{ .context.title }}{{ with .context.pdflink }}</a>{{ end }}</h3>
+<h3 class="paper-title" style="margin:20px 0 5px;">{{ with .context.pdflink }}<a href="{{ . | relURL }}" target="_blank" rel="noopener">{{ end }}{{ .context.title }}{{ with .context.pdflink }}</a>{{ end }}</h3>
 
-{{ with .context.coauthors }}<p style="margin:0 0 5px;">(with {{ . }})</p>{{ end }}
+{{ with .context.coauthors }}<p class="coauthors" style="margin:0 0 5px;">with {{ . }}</p>{{ end }}
 
 {{ with .context.note }}<p style="margin:0 0 5px;">{{ . }}</p>{{ end }}
-{{ with .context.status }}<p style="margin:0 0 5px;"><em>{{ . }}</em></p>{{ end }}
+{{ with .context.status }}<p style="margin:0 0 5px;"><span class="badge">{{ . }}</span></p>{{ end }}
 {{ with .context.book }}<p style="margin:0 0 5px;"><em>{{ . }}</em></p>{{ end }}
 {{ $pid := .pid }}
 {{ with .context.abstract }}<p style="margin:0 0 5px;"><a href="javascript:toggle({{ $pid }})">Abstract<span id="pubabslink_{{ $pid }}"> (click to expand)</span></a><span id="pubabs_{{ $pid }}" style="display:none;">: {{ . }}</span></p>{{ end }}

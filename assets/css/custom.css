@@ -3,14 +3,16 @@
 /* Colours: light by default, dark when <html data-theme="dark"> */
 :root {
   --bg: #fff;
-  --text: #727272;
+  --text: #5c5c5c;
   --heading: #222;
   --h2: #393939;
   --h3: #494949;
   --link: #c2410c;
   --link-hover: #9a3412;
   --rule: #e5e5e5;
-  --button-bg: #f4f4f4; }
+  --button-bg: #f4f4f4;
+  --badge-bg: #fff3e8;
+  --badge-border: #fed7aa; }
 
 html[data-theme="dark"] {
   color-scheme: dark;
@@ -22,7 +24,9 @@ html[data-theme="dark"] {
   --link: #fb923c;
   --link-hover: #fdba74;
   --rule: #333;
-  --button-bg: #242424; }
+  --button-bg: #242424;
+  --badge-bg: #2e1d10;
+  --badge-border: #7c3a12; }
 
 body {
   background-color: var(--bg);
@@ -102,6 +106,100 @@ header img {
   width: 100%;
   border-radius: 4px;
   margin: 0 0 20px; }
+
+/* Polish */
+html {
+  scroll-behavior: smooth; }
+
+section h2 {
+  scroll-margin-top: 24px; }
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--link); }
+
+body {
+  line-height: 1.65; }
+
+/* Menu: a thin bar marks hover and the section on screen */
+header p.contactinfo a,
+header p.lastcontactinfo a {
+  display: inline-block;
+  padding-left: 10px;
+  border-left: 2px solid transparent;
+  transition: border-color 0.15s, color 0.15s; }
+
+header p.contactinfo a:hover,
+header p.lastcontactinfo a:hover {
+  border-left-color: var(--rule); }
+
+header p a.active {
+  border-left-color: var(--link);
+  color: var(--heading);
+  font-weight: bold; }
+
+/* Papers */
+.paper-title {
+  color: var(--heading); }
+
+.coauthors {
+  font-style: italic; }
+
+.badge {
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--badge-border);
+  background: var(--badge-bg);
+  color: var(--link);
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.03em; }
+
+/* News as a small timeline */
+.section-news ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 5px;
+  border-left: 2px solid var(--rule); }
+
+.section-news li {
+  position: relative;
+  padding: 0 0 14px 20px; }
+
+.section-news li:last-child {
+  padding-bottom: 0; }
+
+.section-news li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.45em;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--link);
+  border: 2px solid var(--bg); }
+
+.section-news li > strong:first-child {
+  display: block;
+  color: var(--link);
+  font-size: 0.82em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
+/* Presentations: years as small orange labels */
+.section-presentations p > strong:only-child {
+  color: var(--link);
+  letter-spacing: 0.05em; }
+
+.section-presentations li {
+  margin-bottom: 4px; }
 
 /* Print / PDF: always light, abstracts open, no on-page menu, site address under the name */
 .print-only {
