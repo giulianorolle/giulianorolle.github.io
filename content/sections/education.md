@@ -3,8 +3,8 @@ title: "Education"
 ---
 
 **PhD in Applied Economics**, Gran Sasso Science Institute, 2023 – present  
-*Visiting PhD student, **Columbia University**, Department of Health Policy and Management, January – March 2026*  
-*Visiting PhD student, **ifo Institute**, Center for Energy, Climate, and Resources, July – October 2026*
+*Visiting PhD student, **Columbia University**, Department of Health Policy and Management, Jan – Mar 2026*  
+*Visiting PhD student, **ifo Institute**, Center for Energy, Climate, and Resources, Jul – Oct 2026*
 
 **MSc in Green Economy and Sustainable Development**, University of Ferrara, 2022
 
