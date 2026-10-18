@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   shortbio = "PhD Student in Applied Economics, Gran Sasso Science Institute (GSSI)"
   description = "Giuliano Marco Federico Rolle, PhD student in Applied Economics at GSSI. Environmental economics, health economics, applied microeconometrics."
   logo = "photo.jpg"
-  # Shown in the menu only if the file exists in static/
+  # Shown in the menu only if the file exists in assets/
   cv = "pdf/Rolle_CV.pdf"
   # Picture shown at the very bottom of the page
   endimage = "img/mountains.jpg"
