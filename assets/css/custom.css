@@ -232,5 +232,8 @@ header p a.active {
   h2, h3 {
     break-after: avoid; }
 
-  img, li {
-    break-inside: avoid; } }
+  img, li, .section-contact {
+    break-inside: avoid; }
+
+  .section-education em {
+    font-size: 0.84em; } }
