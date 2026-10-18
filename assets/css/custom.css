@@ -232,5 +232,5 @@ header p a.active {
   h2, h3 {
     break-after: avoid; }
 
-  img {
+  img, li {
     break-inside: avoid; } }
