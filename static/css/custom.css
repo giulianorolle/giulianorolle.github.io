@@ -1,5 +1,89 @@
 /* Site-specific tweaks on top of the academimal theme */
 
+/* Colours: light by default, dark when <html data-theme="dark"> */
+:root {
+  --bg: #fff;
+  --text: #727272;
+  --heading: #222;
+  --h2: #393939;
+  --h3: #494949;
+  --link: #c2410c;
+  --link-hover: #9a3412;
+  --rule: #e5e5e5;
+  --button-bg: #f4f4f4; }
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #161616;
+  --text: #b4b4b4;
+  --heading: #f0f0f0;
+  --h2: #e4e4e4;
+  --h3: #d8d8d8;
+  --link: #fb923c;
+  --link-hover: #fdba74;
+  --rule: #333;
+  --button-bg: #242424; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text); }
+
+h1, strong {
+  color: var(--heading); }
+
+h2 {
+  color: var(--h2); }
+
+h3, h4, h5, h6 {
+  color: var(--h3); }
+
+a {
+  color: var(--link); }
+
+a:hover, a:focus {
+  color: var(--link-hover); }
+
+hr {
+  background: var(--rule); }
+
+section {
+  border-color: var(--rule); }
+
+/* Light/dark switch, top right */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--button-bg);
+  color: var(--heading);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.theme-toggle:hover, .theme-toggle:focus-visible {
+  border-color: var(--link);
+  color: var(--link); }
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px; }
+
+.theme-toggle .icon-sun {
+  display: none; }
+
+html[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block; }
+
+html[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none; }
+
 header img {
   max-width: 220px;
   border-radius: 4px; }
@@ -19,17 +103,29 @@ header img {
   border-radius: 4px;
   margin: 0 0 20px; }
 
-/* Print / PDF: abstracts open, no on-page menu, site address under the name */
+/* Print / PDF: always light, abstracts open, no on-page menu, site address under the name */
 .print-only {
   display: none; }
 
 @media print {
+  html, html[data-theme="dark"] {
+    color-scheme: light;
+    --bg: #fff;
+    --text: #444;
+    --heading: #222;
+    --h2: #393939;
+    --h3: #494949;
+    --link: #c2410c;
+    --link-hover: #9a3412;
+    --rule: #e5e5e5; }
+
   [id^="pubabs_"] {
     display: inline !important; }
 
   [id^="pubabslink_"],
   header p.contactinfo,
-  header p.lastcontactinfo {
+  header p.lastcontactinfo,
+  .theme-toggle {
     display: none !important; }
 
   .print-only {

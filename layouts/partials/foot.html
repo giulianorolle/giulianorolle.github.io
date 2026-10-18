@@ -1,5 +1,4 @@
       <footer>
-        <p><small>Last updated {{ now.Format "January 2006" }}</small></p>
       </footer>
     </div>
     <script src="{{ "js/scale.fix.js" | relURL }}"></script>
@@ -15,6 +14,22 @@
                 linkobj.style.display = "inline";
             }
         }
+        (function () {
+            var root = document.documentElement;
+            var button = document.getElementById("theme-toggle");
+            function label() {
+                var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+                button.setAttribute("aria-label", "Switch to " + next + " mode");
+                button.setAttribute("title", "Switch to " + next + " mode");
+            }
+            label();
+            button.addEventListener("click", function () {
+                var t = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+                root.setAttribute("data-theme", t);
+                try { localStorage.setItem("theme", t); } catch (e) {}
+                label();
+            });
+        })();
     </script>
   </body>
 </html>
